@@ -1,6 +1,7 @@
 package com.goldfishweather.app.activity;
 
 import com.goldfishweather.app.R;
+import com.goldfishweather.app.service.AutoUpdateService;
 import com.goldfishweather.app.util.HttpCallbackListener;
 import com.goldfishweather.app.util.HttpUtil;
 import com.goldfishweather.app.util.Utility;
@@ -187,6 +188,8 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		Intent intent=new Intent(this, AutoUpdateService.class);
+		startService(intent);
 	}
 	
 }

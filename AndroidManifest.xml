@@ -24,6 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.goldfishweather.app.activity.WeatherActivity"></activity>
+        <service android:name="com.goldfishweather.app.service.AutoUpdateService"></service>
+        <receiver android:name="com.goldfishweather.app.receiver.AutoUpdateReceiver"></receiver>
     </application>
 
 </manifest>
